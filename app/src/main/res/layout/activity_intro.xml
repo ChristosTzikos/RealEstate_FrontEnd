@@ -1,132 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_1"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="-300dp" />
+    <data>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ΒΡΕΣ ΤΟ ΕΠΟΜΕΝΟ ΣΟΥ ΣΠΙΤΙ"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:layout_marginTop="-200dp"/>
+    </data>
+1234qwer
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:singleSelection="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_1"
+        tools:context=".MainActivity">
 
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/buy_chip"
-            style="@style/CustomChipStyle"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="buy" />
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-300dp" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/rent_chip"
-            style="@style/CustomChipStyle"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="rent" />
-    </com.google.android.material.chip.ChipGroup>
+            android:text="ΒΡΕΣ ΤΟ ΕΠΟΜΕΝΟ ΣΟΥ ΣΠΙΤΙ"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:layout_marginTop="-200dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:singleSelection="true">
 
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="296dp"
-        android:layout_height="38dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="133dp"
-        android:layout_height="45dp"
-        android:outlineSpotShadowColor="@color/white"
-        android:text="ΒΡΕΣ ΤΟ!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_layout"
-        android:layout_marginTop="10dp"
-        />
-
-    <LinearLayout
-        android:id="@+id/price_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchView">
-
-
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:id="@+id/min_layout"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:hint="min"
-            android:textColorHint="#9A9999"
-            app:hintTextColor="#A8A8A8">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buy_chip"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textColorHint="#616161"
-                tools:ignore="TouchTargetSizeCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:text="buy" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="3dp"
-            android:hint="max"
-            android:textColorHint="#9A9999"
-            app:hintTextColor="#979797">
-
-            <com.google.android.material.textfield.TextInputEditText
-
-                android:layout_width="match_parent"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rent_chip"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textColorHint="#616161"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:text="rent" />
+        </com.google.android.material.chip.ChipGroup>
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="296dp"
+            android:layout_height="38dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:iconifiedByDefault="false"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="133dp"
+            android:layout_height="45dp"
+            android:outlineSpotShadowColor="@color/white"
+            android:text="ΒΡΕΣ ΤΟ!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_layout"
+            android:layout_marginTop="10dp"
+
+
+            />
+
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/min_layout"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="min"
+                android:textColorHint="#9A9999"
+                app:hintTextColor="#A8A8A8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColorHint="#616161"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="3dp"
+                android:hint="max"
+                android:textColorHint="#9A9999"
+                app:hintTextColor="#979797">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColorHint="#616161"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
