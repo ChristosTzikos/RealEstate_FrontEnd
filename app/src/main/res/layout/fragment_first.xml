@@ -83,7 +83,7 @@
 
 
         <Button
-            android:id="@+id/btn_accept"
+            android:id="@+id/btn_find"
             android:layout_width="133dp"
             android:layout_height="45dp"
             android:outlineSpotShadowColor="@color/white"
