@@ -8,7 +8,8 @@
     tools:context=".SecondFragment"
     android:background="@drawable/background_1"
     android:orientation="vertical"
-    android:layout_alignRight="@id/filters" >
+
+    >
 
 
 
@@ -57,10 +58,12 @@
 
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recycler_View"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+
+        >
 
 
 
