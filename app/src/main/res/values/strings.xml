@@ -1,5 +1,16 @@
 <resources>
-    <string name="app_name">Real_Estate</string>
+    <string name="app_name">HOMEZY</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="countries_array">
+        <item>Thessaloniki</item>
+        <item>Athina</item>
+        <item>Ioannia</item>
+        <item>Patra</item>
+        <item>Larisa</item>
+        <item>Kavala</item>
+        <item>Agrinio</item>
+    </string-array>
+
 </resources>

@@ -1,14 +1,17 @@
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
-    android:layout_margin="5dp"
-    app:cardBackgroundColor="@color/black"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="12dp"
     app:cardElevation="3dp"
     app:contentPadding="4dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+
     >
 
     <LinearLayout
@@ -23,31 +26,33 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/card_title"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Large Apartment in Skg"
+            android:textColor="@color/black"
             android:layout_marginLeft="30dp"/>
 
         <TextView
-            android:id="@+id/location_info"
+            android:id="@+id/card_location"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Panorama,Thessaloniki"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="50dp"
             />
 
     </LinearLayout>
     <ImageView
-        android:src="@drawable/apartment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/card_image"
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:adjustViewBounds="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"/>
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,17 +62,18 @@
             android:id="@+id/sqr_ft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="380 sqr.ft"
-            android:textColor="#FFFFFF"
+
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="italic"
 
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/card_price"
+           android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="900$/month"
-            android:textColor="@color/white"
+
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginLeft="200dp"
             />

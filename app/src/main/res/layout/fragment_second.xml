@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
  <LinearLayout
+    android:id="@+id/linear2"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,8 @@
     tools:context=".SecondFragment"
     android:background="@drawable/background_1"
     android:orientation="vertical"
-    android:layout_alignRight="@id/filters" >
+
+    >
 
 
 
@@ -56,9 +58,12 @@
 
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_View"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+
+        >
 
 
 
