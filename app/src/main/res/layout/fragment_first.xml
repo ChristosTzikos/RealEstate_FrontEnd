@@ -37,13 +37,12 @@
             android:layout_marginTop="-200dp"
             android:text="ΒΡΕΣ ΤΟ ΕΠΟΜΕΝΟ ΣΟΥ ΣΠΙΤΙ"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/chipGroup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroup"
+        <RadioGroup
+            android:id="@+id/radio_Group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/searchView"
@@ -52,23 +51,23 @@
             app:singleSelection="true">
 
 
-            <com.google.android.material.chip.Chip
+            <RadioButton
                 android:id="@+id/buy_chip"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="buy" />
+                android:text="@string/buy" />
 
-            <com.google.android.material.chip.Chip
+            <RadioButton
                 android:id="@+id/rent_chip"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="rent" />
-        </com.google.android.material.chip.ChipGroup>
+                android:text="@string/rent" />
+        </RadioGroup>
 
 
-        <SearchView
+        <AutoCompleteTextView
             android:id="@+id/searchView"
             android:layout_width="296dp"
             android:layout_height="38dp"
@@ -112,7 +111,7 @@
                 android:id="@+id/min_layout"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:hint="min"
+                android:hint="$ min"
                 android:textColorHint="#9A9999"
                 app:hintTextColor="#A8A8A8">
 
@@ -128,7 +127,7 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="3dp"
-                android:hint="max"
+                android:hint="$ max"
                 android:textColorHint="#9A9999"
                 app:hintTextColor="#979797">
 
