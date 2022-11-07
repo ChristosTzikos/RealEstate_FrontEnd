@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
- <LinearLayout
-    android:id="@+id/linear2"
+ <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SecondFragment"
-    android:background="@drawable/background_1"
-    android:orientation="vertical"
-
     >
+    <data>
 
+    </data>
 
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondFragment"
+        android:background="@drawable/background_1"
+        android:orientation="vertical"
+        >
 
 
     <TextView
@@ -41,13 +45,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-    <TextView
+    <Button
         android:id="@+id/filters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Filters"
         android:textSize="16sp"
         android:textStyle="bold"
+
 
         />
 
@@ -70,8 +75,9 @@
 
 
     </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 
 
 
 
-</LinearLayout>
+</layout>

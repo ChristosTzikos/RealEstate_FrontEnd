@@ -11,16 +11,16 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 
-class RecyclerAdapter(private val homeList:ArrayList<Home>)
+class RecyclerAdapter(private val homeList: List<Product2>)
     : RecyclerView.Adapter<RecyclerAdapter.HomeViewHolder>() {
 
 
     class HomeViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
-        val image: ImageView = itemView.findViewById(R.id.card_image)
-        val title: TextView = itemView.findViewById(R.id.card_title)
-        val detail: TextView = itemView.findViewById(R.id.sqr_ft)
+        val photo: ImageView = itemView.findViewById(R.id.card_image)
+        val Name: TextView = itemView.findViewById(R.id.card_title)
+        val area: TextView = itemView.findViewById(R.id.sqr_ft)
         val price: TextView = itemView.findViewById(R.id.card_price)
-        val location: TextView = itemView.findViewById(R.id.card_location)
+        val region: TextView = itemView.findViewById(R.id.card_location)
 }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
@@ -29,12 +29,12 @@ class RecyclerAdapter(private val homeList:ArrayList<Home>)
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        val home = homeList[position]
-        holder.image.setImageResource(home.images)
-        holder.title.text = home.titles
-        holder.detail.text = home.squares
-        holder.price.text = home.prices
-        holder.location.text = home.details
+        val home = homeList!![position]
+        //holder.photo = home.Photo
+        holder.Name.text =  home.name
+        //holder.area.text = home.area.toString()
+        //holder.price.text = home.price.toString()
+        //holder.region.text = home.region
     }
 
     override fun getItemCount(): Int {

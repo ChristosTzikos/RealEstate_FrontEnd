@@ -47,7 +47,6 @@
     </LinearLayout>
     <ImageView
         android:id="@+id/card_image"
-
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:adjustViewBounds="true"

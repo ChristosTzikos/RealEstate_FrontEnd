@@ -16,6 +16,8 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/test_nav"
             android:layout_centerInParent="true"
+
              />
+
 
     </RelativeLayout>
