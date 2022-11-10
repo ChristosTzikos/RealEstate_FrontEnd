@@ -35,7 +35,14 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
         binding.buyChip.isChecked = true
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+        //call chatbot activity on button click
+        binding.btnChat.setOnClickListener {
+            //findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToChatbot())
+
+>>>>>>> Stashed changes
         //call chatbot activity on button click
         binding.btnChat.setOnClickListener {
             val intent = android.content.Intent(
@@ -45,6 +52,9 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             startActivity(intent)
         }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         binding.btnFind.setOnClickListener {
 

@@ -69,6 +69,10 @@ android {
         implementation 'androidx.recyclerview:recyclerview:1.2.1'
         implementation 'androidx.cardview:cardview:1.0.0'
 
+<<<<<<< Updated upstream
+=======
+        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+>>>>>>> Stashed changes
         implementation("io.coil-kt:coil:2.2.2")
 
         testImplementation 'junit:junit:4.13.2'
@@ -77,6 +81,12 @@ android {
 //Navigation Dependencies
         implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
         implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+<<<<<<< Updated upstream
 
 
+=======
+        //dialogFlow
+        implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
+        implementation 'io.grpc:grpc-okhttp:1.30.0'
+>>>>>>> Stashed changes
     }
