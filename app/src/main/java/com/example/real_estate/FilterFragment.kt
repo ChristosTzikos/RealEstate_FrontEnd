@@ -26,7 +26,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
         binding.btnBack.setOnClickListener{
 
 
-            findNavController().navigate(R.id.secondFragment)
+            findNavController().popBackStack()
 
         }
 

@@ -8,9 +8,7 @@ import retrofit2.http.GET
 interface ApiInterface {
 
     @GET("Products?page=1")
-    fun getData(
-
-    )
+    fun getData()
             : Call<Test>
 
 }

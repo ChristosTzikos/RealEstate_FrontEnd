@@ -39,6 +39,8 @@
         <argument
             android:name="maxRent"
             app:argType="string" />
+
+
         <action
             android:id="@+id/action_secondFragment_to_filterFragment"
             app:destination="@id/filterFragment" />
@@ -67,6 +69,33 @@
         <action
             android:id="@+id/action_detailFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+
+
+        <argument
+            android:name="name"
+            app:argType="string"/>
+
+        <argument
+            android:name="id"
+            app:argType="string"/>
+
+        <argument
+            android:name="region"
+            app:argType="string"/>
+
+        <argument
+            android:name="area"
+            app:argType="string"/>
+
+        <argument
+            android:name="price"
+            app:argType="string"/>
+        <argument
+            android:name="photo"
+            app:argType="string"/>
+
+
+
     </fragment>
 
 </navigation>
