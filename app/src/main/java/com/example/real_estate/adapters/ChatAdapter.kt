@@ -55,7 +55,7 @@ class ChatAdapter(private var activity: Activity, private var messageList: List<
       } else {
         binding.messageSend.visibility = View.VISIBLE
         binding.messageReceive.visibility = View.GONE
-        binding.messageSend.text = "something went wrong our agent cant help you right now!"
+        binding.messageSend.text = item.message
      }
     }
 

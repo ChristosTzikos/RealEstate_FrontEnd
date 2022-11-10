@@ -41,17 +41,19 @@ class Chatbot_activity : AppCompatActivity() {
   private var sessionsClient: SessionsClient? = null
   private var sessionName: SessionName? = null
   private val uuid = UUID.randomUUID().toString()
-  private val TAG = "mainactivity"
+  private val TAG = "chatbotactivity"
   private lateinit var chatAdapter: ChatAdapter
 
   @SuppressLint("NotifyDataSetChanged")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
+    setContentView(R.layout.activity_chatbot)
 
     //setting adapter to recyclerview
+
     chatAdapter = ChatAdapter(this, messageList)
     chatView.adapter = chatAdapter
+
 
     chatAdapter.itemClicks.onEach {
       Toast.makeText(this, "asdasd",Toast.LENGTH_SHORT).show()
