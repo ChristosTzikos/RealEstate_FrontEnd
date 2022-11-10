@@ -34,6 +34,18 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
         //set a default option checked, e.g. the buy option
         binding.buyChip.isChecked = true
 
+<<<<<<< Updated upstream
+=======
+        //call chatbot activity on button click
+        binding.btnChat.setOnClickListener {
+            val intent = android.content.Intent(
+                this@FirstFragment.requireContext(),
+                Chatbot_activity::class.java
+            )
+            startActivity(intent)
+        }
+
+>>>>>>> Stashed changes
         binding.btnFind.setOnClickListener {
 
             //before navigating we need to get the user's inputs
