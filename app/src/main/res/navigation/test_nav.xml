@@ -16,6 +16,9 @@
             app:destination="@id/secondFragment"
 
             />
+        <action
+            android:id="@+id/action_firstFragment_to_chatbot"
+            app:destination="@id/chatbot" />
     </fragment>
 
     <fragment
@@ -44,9 +47,9 @@
         <action
             android:id="@+id/action_secondFragment_to_filterFragment"
             app:destination="@id/filterFragment" />
-        <action
-            android:id="@+id/action_secondFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_secondFragment_to_detailFragment"-->
+<!--            app:destination="@id/detailFragment" />-->
 
         <!--        <action-->
         <!--            android:id="@+id/action_secondFragment_to_firstFragment"-->
@@ -61,13 +64,22 @@
             android:id="@+id/action_filterFragment_to_secondFragment4"
             app:destination="@id/secondFragment" />
     </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/detailFragment"-->
+<!--        android:name="com.example.real_estate.DetailFragment"-->
+<!--        android:label="fragment_detail"-->
+<!--        tools:layout="@layout/fragment_detail" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_detailFragment_to_secondFragment"-->
+<!--            app:destination="@id/secondFragment" />-->
+<!--    </fragment>-->
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.real_estate.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" >
+        android:id="@+id/chatbot"
+        android:name="com.example.real_estate.chatbot"
+        android:label="fragment_chatbot"
+        tools:layout="@layout/fragment_chatbot" >
         <action
-            android:id="@+id/action_detailFragment_to_secondFragment"
+            android:id="@+id/action_chatbot_to_secondFragment"
             app:destination="@id/secondFragment" />
 
 
