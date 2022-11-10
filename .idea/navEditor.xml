@@ -3,23 +3,40 @@
   <component name="navEditor-manualLayoutAlgorithm2">
     <option name="myPositions">
       <map>
+<<<<<<< HEAD
+        <entry key="test_nav.xml">
+=======
         <entry key="tes_nav.xml">
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
           <value>
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+<<<<<<< HEAD
+                  <entry key="chatbot">
+=======
                   <entry key="firstFragment">
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
+<<<<<<< HEAD
+                            <option name="x" value="110" />
+                            <option name="y" value="379" />
+=======
                             <option name="x" value="-45" />
                             <option name="y" value="-22" />
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+<<<<<<< HEAD
+                            <entry key="action_chatbot_to_secondFragment">
+=======
                             <entry key="action_firstFragment_to_secondFragment">
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -29,6 +46,8 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+<<<<<<< HEAD
+=======
                   <entry key="secondFragment">
                     <value>
                       <LayoutPositions>
@@ -60,13 +79,19 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                   <entry key="detailFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
+<<<<<<< HEAD
+                            <option name="x" value="500" />
+                            <option name="y" value="368" />
+=======
                             <option name="x" value="226" />
                             <option name="y" value="-419" />
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -86,8 +111,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
+<<<<<<< HEAD
+                            <option name="x" value="500" />
+                            <option name="y" value="12" />
+=======
                             <option name="x" value="476" />
                             <option name="y" value="16" />
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -108,11 +138,23 @@
                         <option name="myPosition">
                           <Point>
                             <option name="x" value="12" />
+<<<<<<< HEAD
+                            <option name="y" value="46" />
+=======
                             <option name="y" value="12" />
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+<<<<<<< HEAD
+                            <entry key="action_firstFragment_to_chatbot">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+=======
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                             <entry key="action_firstFragment_to_secondFragment">
                               <value>
                                 <LayoutPositions />
@@ -128,8 +170,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
+<<<<<<< HEAD
+                            <option name="x" value="256" />
+                            <option name="y" value="46" />
+=======
                             <option name="x" value="230" />
                             <option name="y" value="12" />
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
                           </Point>
                         </option>
                         <option name="myPositions">

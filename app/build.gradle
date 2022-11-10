@@ -5,7 +5,7 @@ plugins {
 
 }
 
-
+apply plugin: 'kotlin-android-extensions'
 
 
 android {
@@ -21,6 +21,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+        }
     }
 
     buildTypes {
@@ -44,6 +47,14 @@ android {
     }
     packagingOptions {
         exclude 'META-INF/androidx.cardview_cardview.version'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    buildFeatures{
+
+        viewBinding true
+
     }
 
 }
@@ -58,6 +69,11 @@ android {
         implementation 'com.google.android.material:material:1.6.1'
         implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
+        testImplementation 'junit:junit:4.+'
+
+        androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
         // below dependency for using retrofit.
         implementation 'com.squareup.retrofit2:retrofit:2.9.0'
         implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
@@ -69,11 +85,18 @@ android {
         implementation 'androidx.recyclerview:recyclerview:1.2.1'
         implementation 'androidx.cardview:cardview:1.0.0'
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
         implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+=======
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e
         implementation("io.coil-kt:coil:2.2.2")
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
 
         testImplementation 'junit:junit:4.13.2'
         androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -81,6 +104,7 @@ android {
 //Navigation Dependencies
         implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
         implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 
@@ -89,4 +113,14 @@ android {
         implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
         implementation 'io.grpc:grpc-okhttp:1.30.0'
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+        //dialogFlow
+        implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
+        implementation 'io.grpc:grpc-okhttp:1.30.0'
+=======
+
+
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e
     }

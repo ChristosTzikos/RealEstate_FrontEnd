@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.real_estate.databinding.FragmentFirstBinding
+import com.google.cloud.dialogflow.v2.Intent
 
 //import com.example.viewbinding.datababinding.FirstFragment
 const val BASE_URL = "https://homeazy.herokuapp.com/"
@@ -34,12 +35,23 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
         //set a default option checked, e.g. the buy option
         binding.buyChip.isChecked = true
 
+<<<<<<< HEAD
         //call chatbot activity on button click
         binding.btnChat.setOnClickListener {
             //findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToChatbot())
 
+=======
+<<<<<<< HEAD
         //call chatbot activity on button click
         binding.btnChat.setOnClickListener {
+            //findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToChatbot())
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e
+        //call chatbot activity on button click
+        binding.btnChat.setOnClickListener {
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
             val intent = android.content.Intent(
                 this@FirstFragment.requireContext(),
                 Chatbot_activity::class.java
@@ -47,6 +59,13 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             startActivity(intent)
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e
         binding.btnFind.setOnClickListener {
 
             //before navigating we need to get the user's inputs

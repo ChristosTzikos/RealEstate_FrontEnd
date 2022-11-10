@@ -17,8 +17,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
+<<<<<<< HEAD:app/src/main/java/com/example/real_estate/DetailFragment.kt
 <<<<<<< Updated upstream:app/src/main/java/com/example/real_estate/DetailFragment.kt
 =======
+=======
+<<<<<<< HEAD:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
 /**
  * A simple [Fragment] subclass.
  * Use the [chatbot.newInstance] factory method to
@@ -28,8 +32,13 @@ class chatbot : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+<<<<<<< HEAD:app/src/main/java/com/example/real_estate/DetailFragment.kt
 >>>>>>> Stashed changes:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
+=======
+=======
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
 class DetailFragment : Fragment(R.layout.fragment_detail) {
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea:app/src/main/java/com/example/real_estate/DetailFragment.kt
 
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
@@ -83,8 +92,12 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
     }
 
+<<<<<<< HEAD:app/src/main/java/com/example/real_estate/DetailFragment.kt
 <<<<<<< Updated upstream:app/src/main/java/com/example/real_estate/DetailFragment.kt
 =======
+=======
+<<<<<<< HEAD:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -114,8 +127,12 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     }
 }
 =======
+<<<<<<< HEAD:app/src/main/java/com/example/real_estate/DetailFragment.kt
 >>>>>>> Stashed changes:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
+=======
+>>>>>>> b16cf76d5ebf24df5ec56ec2164e4067a4ed6a3e:app/src/main/java/com/example/real_estate/ChatbotFragment.kt
 }
 
 
 
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea:app/src/main/java/com/example/real_estate/DetailFragment.kt
