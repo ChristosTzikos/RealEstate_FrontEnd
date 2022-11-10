@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.real_estate.databinding.FragmentFirstBinding
+import com.google.cloud.dialogflow.v2.Intent
 
 //import com.example.viewbinding.datababinding.FirstFragment
 const val BASE_URL = "https://homeazy.herokuapp.com/"
@@ -33,6 +34,16 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
 
         //set a default option checked, e.g. the buy option
         binding.buyChip.isChecked = true
+
+        //chatbot button
+        binding.btnChat.setOnClickListener {
+            //findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToChatbot())
+            val intent = android.content.Intent(
+                this@FirstFragment.requireContext(),
+                Chatbot_activity::class.java
+            )
+            startActivity(intent)
+        }
 
         binding.btnFind.setOnClickListener {
 

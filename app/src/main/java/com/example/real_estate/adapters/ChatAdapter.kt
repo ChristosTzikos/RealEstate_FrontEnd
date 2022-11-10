@@ -37,7 +37,7 @@ class ChatAdapter(private var activity: Activity, private var messageList: List<
       if (item.isReceived && item.message.contains("http:")) {
         //if (item.message.contains("http:")) {
           //binding.urlbtn.visibility = View.VISIBLE
-          Log.d("thodoris", item.message)
+          //Log.d("thodoris", item.message)
         val url = item.message
           itemClickChannel.trySend(url)
         //}

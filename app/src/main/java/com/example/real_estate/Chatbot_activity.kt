@@ -17,11 +17,11 @@ import com.google.cloud.dialogflow.v2.SessionName
 import com.google.cloud.dialogflow.v2.SessionsClient
 import com.google.cloud.dialogflow.v2.SessionsSettings
 import com.google.cloud.dialogflow.v2.TextInput
-import com.vignesh.chatbotkotlin.adapters.ChatAdapter
-import com.vignesh.chatbotkotlin.models.Message
-import kotlinx.android.synthetic.main.activity_main.btnSend
-import kotlinx.android.synthetic.main.activity_main.chatView
-import kotlinx.android.synthetic.main.activity_main.editMessage
+import com.example.real_estate.adapters.ChatAdapter
+import com.example.real_estate.models.Message
+import kotlinx.android.synthetic.main.activity_chatbot.btnSend
+import kotlinx.android.synthetic.main.activity_chatbot.chatView
+import kotlinx.android.synthetic.main.activity_chatbot.editMessage
 import kotlinx.android.synthetic.main.adapter_message_one.*
 import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.GlobalScope
