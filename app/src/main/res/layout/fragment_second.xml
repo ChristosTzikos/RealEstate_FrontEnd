@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
- <LinearLayout
-    android:id="@+id/linear2"
+ <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SecondFragment"
-    android:background="@drawable/background_1"
-    android:orientation="vertical"
-
     >
+    <data>
 
+    </data>
 
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondFragment"
+        android:background="@drawable/background_1"
+        android:orientation="vertical"
+        >
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        />
 
 
     <SearchView
@@ -37,11 +29,20 @@
         android:layout_marginTop="10dp"
 
         />
-    <LinearLayout
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"
+           android:layout_marginTop="10dp"
+           />
+
+
+       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         >
-    <TextView
+    <Button
         android:id="@+id/filters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,28 +51,55 @@
         android:textStyle="bold"
 
         />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+          android:id="@+id/btn_find"
+          android:text="Find"
+          android:textStyle="bold"
+          android:textSize="16sp"
+           />
+
+    </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"
+           />
+
+
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:scrollbarSize="10dp"
+        android:fadeScrollbars="true"
+        android:overScrollMode="ifContentScrolls"
+        android:layout_gravity="center"
+
+
+
+
 
 
         />
 
 
 
+
+
+
+
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_View"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-
-        >
 
 
 
 
 
-    </androidx.recyclerview.widget.RecyclerView>
-
-
-
-
-</LinearLayout>
+</layout>
