@@ -1,5 +1,8 @@
 package com.example.real_estate
 
+import android.annotation.SuppressLint
+import android.content.ClipData.Item
+import android.graphics.Paint.Align
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,7 +18,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import com.example.real_estate.databinding.FragmentSecondBinding
-
+import java.text.ParsePosition
 
 
 class SecondFragment : Fragment(R.layout.fragment_second) {
@@ -58,11 +61,10 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
 
 
-        //recyclerView = binding.recyclerView
-        recyclerView = view.findViewById(R.id.recycler_View)
+        recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-
         homeList = ArrayList()
+        recyclerView.setHasFixedSize(true)
 
 
         /*dummy
@@ -111,17 +113,44 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
                     recyclerAdapter = RecyclerAdapter(responseBody!!)
                     recyclerAdapter.notifyDataSetChanged()
                     recyclerView.adapter = recyclerAdapter
-                }
+                    recyclerAdapter.setOnItemClickListener(object :
+                        RecyclerAdapter.onItemClickListener {
 
+
+                        override fun onItemClick(position: Int) {
+
+
+
+                            var that = responseBody!![position]
+                            findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToDetailFragment(
+                                // Give ONLY Strings to Detail Fragment (Non-Null Errors)
+
+                                that.name.toString() ,
+                                that.id.toString() ,
+                                that.region.toString(),
+                                that.area.toString() ,
+                                that.price.toString() ,
+                                that.photo.toString()
+                            ))
+                        }
+
+
+                    })
+
+                }
             }
 
             override fun onFailure(call: Call<Test>, t: Throwable) {
                 Toast.makeText(requireContext(), "Error fetching data", Toast.LENGTH_SHORT).show()
             }
         })
-    }
+    }}
 
-}
+
+
+
+
+
 
 
 

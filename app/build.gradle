@@ -85,7 +85,11 @@ android {
         implementation 'androidx.recyclerview:recyclerview:1.2.1'
         implementation 'androidx.cardview:cardview:1.0.0'
 
+<<<<<<< HEAD
         implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+=======
+        implementation("io.coil-kt:coil:2.2.2")
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
 
         testImplementation 'junit:junit:4.13.2'
         androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -93,7 +97,12 @@ android {
 //Navigation Dependencies
         implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
         implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+<<<<<<< HEAD
         //dialogFlow
         implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
         implementation 'io.grpc:grpc-okhttp:1.30.0'
+=======
+
+
+>>>>>>> 97db980c857303e943c419f552b67406471a0cea
     }

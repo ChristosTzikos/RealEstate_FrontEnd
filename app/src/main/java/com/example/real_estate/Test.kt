@@ -1,6 +1,8 @@
 package com.example.real_estate
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class Test(
@@ -47,6 +49,8 @@ data class Product2(
     @SerializedName("request")
     val request: Request2
 )
+
+
 
 
 data class Request2(
