@@ -35,6 +35,7 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
         //set a default option checked, e.g. the buy option
         binding.buyChip.isChecked = true
 
+        //fragment to chatbot activity navigation
         binding.btnChat.setOnClickListener {
             val intent = android.content.Intent(
                 this@FirstFragment.requireContext(),
