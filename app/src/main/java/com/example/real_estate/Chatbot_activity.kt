@@ -2,9 +2,13 @@ package com.example.real_estate
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.api.gax.core.FixedCredentialsProvider
 import com.google.auth.oauth2.GoogleCredentials
@@ -18,11 +22,11 @@ import com.google.cloud.dialogflow.v2.SessionsClient
 import com.google.cloud.dialogflow.v2.SessionsSettings
 import com.google.cloud.dialogflow.v2.TextInput
 import com.example.real_estate.adapters.ChatAdapter
+import com.example.real_estate.adapters.ChatAdapter.*
 import com.example.real_estate.models.Message
-import kotlinx.android.synthetic.main.activity_chatbot.btnSend
-import kotlinx.android.synthetic.main.activity_chatbot.chatView
-import kotlinx.android.synthetic.main.activity_chatbot.editMessage
+import kotlinx.android.synthetic.main.activity_chatbot.*
 import kotlinx.android.synthetic.main.adapter_message_one.*
+import kotlinx.android.synthetic.main.adapter_message_one.view.*
 import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.GlobalScope
 //import kotlinx.coroutines.NonCancellable.message
@@ -37,6 +41,7 @@ import java.util.UUID
 class Chatbot_activity : AppCompatActivity() {
   private var messageList: ArrayList<Message> = ArrayList()
 
+
   //dialogFlow
   private var sessionsClient: SessionsClient? = null
   private var sessionName: SessionName? = null
@@ -44,10 +49,13 @@ class Chatbot_activity : AppCompatActivity() {
   private val TAG = "chatbotactivity"
   private lateinit var chatAdapter: ChatAdapter
 
+
   @SuppressLint("NotifyDataSetChanged")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_chatbot)
+
+   // var asdbtn = findViewById<Button>(R.id.btnUrl)
 
     //setting adapter to recyclerview
 
@@ -56,7 +64,17 @@ class Chatbot_activity : AppCompatActivity() {
 
 
     chatAdapter.itemClicks.onEach {
-      Toast.makeText(this, "asdasd",Toast.LENGTH_SHORT).show()
+
+      btnSend.visibility = View.GONE
+      editMessage.visibility= View.GONE
+      btnUrl.visibility = View.VISIBLE
+
+      btnUrl.setOnClickListener{
+        val secondFragment = SecondFragment()
+        val fragment : Fragment? =
+            supportFragmentManager.findFragmentByTag(SecondFragment::class.java.simpleName)
+
+      }
       //Log.d(TAG, "doInBackground: " + it.message)
 //      urlbtn.setOnClickListener{
 //        Toast.makeText(this/@mainactivity, "", Toast.LENGTH_SHORT).show()
@@ -65,6 +83,9 @@ class Chatbot_activity : AppCompatActivity() {
 //      intent.putExtra("url", it)
 //      startActivity(intent)
     }.launchIn(lifecycleScope)
+
+
+
 
     //onclick listener to update the list and call dialogflow
     btnSend.setOnClickListener {
@@ -80,6 +101,7 @@ class Chatbot_activity : AppCompatActivity() {
     //initialize bot config
     setUpBot()
   }
+
 
   @SuppressLint("NotifyDataSetChanged")
   private fun addMessageToList(message: String, isReceived: Boolean) {

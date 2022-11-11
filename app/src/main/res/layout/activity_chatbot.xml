@@ -13,7 +13,6 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@drawable/border_outline"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/chatView"
@@ -30,7 +29,9 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toStartOf="@+id/btnSend"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        />
 
     <ImageButton
       android:id="@+id/btnSend"
@@ -41,7 +42,26 @@
       app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:srcCompat="@android:drawable/ic_media_play"
-      app:tint="#43A047" />
+      app:tint="#43A047"
+        android:visibility="visible"
+        />
+
+    <Button
+        android:id="@+id/btnUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Πατήστε εδώ για να δείτε τα αποτελεσματα"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editMessage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="invisible"
+        app:tint="#43A047" />
+
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 
 
