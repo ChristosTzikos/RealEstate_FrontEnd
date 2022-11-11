@@ -4,4 +4,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="buy" />
     <string name="rent" />
+
+    <string name="username">email</string>
+    <string name="password">Password</string>
+
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="homeazy_real_estate">HOMEAZY YOUR REAL ESTATE APP</string>
 </resources>
