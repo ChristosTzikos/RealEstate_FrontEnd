@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondFragment"
+        android:background="@drawable/background_1"
+        android:orientation="vertical"
+        >
+
+
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchView"
+        android:background="@color/white"
+        android:iconifiedByDefault="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+
+        />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"
+           android:layout_marginTop="10dp"
+           />
+
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:id="@+id/filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filters"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+          android:id="@+id/btn_find"
+          android:text="Find"
+          android:textStyle="bold"
+          android:textSize="16sp"
+           />
+
+    </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"
+           />
+
+
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:scrollbarSize="10dp"
+        android:fadeScrollbars="true"
+        android:overScrollMode="ifContentScrolls"
+        android:layout_gravity="center"
+
+
+
+
+
+
+        />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</layout>

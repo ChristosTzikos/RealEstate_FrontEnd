@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_1"
+        tools:context=".FirstFragment">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.447" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-200dp"
+            android:text="ΒΡΕΣ ΤΟ ΕΠΟΜΕΝΟ ΣΟΥ ΣΠΙΤΙ"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <RadioGroup
+            android:id="@+id/radio_Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:singleSelection="true">
+
+
+            <RadioButton
+                android:id="@+id/buy_chip"
+                style="@style/CustomChipStyle"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy" />
+
+            <RadioButton
+                android:id="@+id/rent_chip"
+                style="@style/CustomChipStyle"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent" />
+        </RadioGroup>
+
+
+        <!--        <AutoCompleteTextView-->
+        <!--            android:id="@+id/searchView"-->
+        <!--            android:layout_width="296dp"-->
+        <!--            android:layout_height="38dp"-->
+        <!--            android:hint="Select city"-->
+        <!--            android:background="@color/white"-->
+
+        <!--            android:iconifiedByDefault="false"-->
+
+        <!--            />-->
+
+        <Spinner
+            android:id="@+id/searchView"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="133dp"
+            android:layout_height="45dp"
+            android:outlineSpotShadowColor="@color/white"
+            android:text="ΒΡΕΣ ΤΟ!"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_layout" />
+
+        <Button
+            android:id="@+id/btn_chat"
+            android:layout_width="133dp"
+            android:layout_height="45dp"
+
+            android:outlineSpotShadowColor="@color/white"
+            android:text="Chatbot"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toEndOf="@+id/btn_find"
+            app:layout_constraintTop_toBottomOf="@+id/price_layout" />
+
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/min_layout"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="$ min"
+                android:textColorHint="#9A9999"
+                app:hintTextColor="#A8A8A8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/min_rent_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColorHint="#616161"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="3dp"
+                android:hint="$ max"
+                android:textColorHint="#9A9999"
+                app:hintTextColor="#979797">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/max_rent_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColorHint="#616161"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

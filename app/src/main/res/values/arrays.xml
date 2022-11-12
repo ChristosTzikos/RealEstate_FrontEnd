@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities_array">
+        <item>Θεσσαλονίκη</item>
+        <item>Αθήνα</item>
+        <item>Λάρισα</item>
+        <item>Ηράκλειο</item>
+
+    </string-array>
+</resources>

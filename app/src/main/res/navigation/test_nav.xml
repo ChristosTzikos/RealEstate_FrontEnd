@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tes_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.real_estate.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.real_estate.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+
+
+        <argument
+            android:name="buyOrRent"
+            app:argType="string" />
+
+        <argument
+            android:name="city"
+            app:argType="string" />
+
+        <argument
+            android:name="minRent"
+            app:argType="string" />
+
+        <argument
+            android:name="maxRent"
+            app:argType="string" />
+
+        <argument
+            android:name="maxArea"
+            app:argType="string" />
+
+        <argument
+            android:name="minArea"
+            app:argType="string" />
+
+<!--        <argument-->
+<!--            android:name="roof"-->
+<!--            app:argType="string" />-->
+
+        <action
+            android:id="@+id/action_secondFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+
+<!--        <action-->
+<!--            android:id="@+id/action_secondFragment_to_detailFragment"-->
+<!--            app:destination="@id/detailFragment" />-->
+
+        <!--        <action-->
+        <!--            android:id="@+id/action_secondFragment_to_firstFragment"-->
+        <!--            app:destination="@id/firstFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.real_estate.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.real_estate.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+
+
+        <argument
+            android:name="name"
+            app:argType="string"/>
+
+        <argument
+            android:name="id"
+            app:argType="string"/>
+
+        <argument
+            android:name="region"
+            app:argType="string"/>
+
+        <argument
+            android:name="area"
+            app:argType="string"/>
+
+        <argument
+            android:name="price"
+            app:argType="string"/>
+        <argument
+            android:name="photo"
+            app:argType="string"/>
+
+
+
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/detailFragment"-->
+<!--        android:name="com.example.real_estate.DetailFragment"-->
+<!--        android:label="fragment_detail"-->
+<!--        tools:layout="@layout/fragment_detail" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_detailFragment_to_secondFragment"-->
+<!--            app:destination="@id/secondFragment" />-->
+<!--    </fragment>-->
+
+</navigation>

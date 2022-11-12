@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@drawable/background_1"
+        >
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="30dp"
+        android:text="Select filters"
+        android:textColor="#FF5722"
+        android:textSize="25sp" />
+
+
+        <RadioGroup
+            android:id="@+id/radio_Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:singleSelection="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/buy_chip"
+                style="@style/CustomChipStyle"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy" />
+
+            <RadioButton
+                android:id="@+id/rent_chip"
+                style="@style/CustomChipStyle"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/searchView"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select floor:"
+        android:textColor="#FF5722"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="1st floor"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2nd floor"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="3rd floor"
+            android:textSize="15sp"/>
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4th floor"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Enter squarefoot:"
+        android:textColor="#FF5722"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="Min Sqft"
+            android:textColorHint="#9A9999"
+            app:hintTextColor="#A8A8A8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/minArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColorHint="#616161"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="Max Sqft"
+            android:textColorHint="#9A9999"
+            app:hintTextColor="#979797"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/min_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/maxArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColorHint="#616161"
+                tools:ignore="TouchTargetSizeCheck"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Enter Price:"
+        android:textColor="#FF5722"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="Min $"
+            android:textColorHint="#9A9999"
+            app:hintTextColor="#A8A8A8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/minRentEditext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColorHint="#616161"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="Max $"
+            android:textColorHint="#9A9999"
+            app:hintTextColor="#979797"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/min_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/maxPriceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColorHint="#616161"
+                tools:ignore="TouchTargetSizeCheck"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        >
+
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/btn_find_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find" />
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</layout>
