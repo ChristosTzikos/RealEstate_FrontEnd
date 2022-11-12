@@ -31,11 +31,6 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
     private lateinit var homeList:ArrayList<Product>
     private lateinit var recyclerAdapter: RecyclerAdapter
 
-
-
-
-
-
     override fun onViewCreated(view:View , savedInstanceState:Bundle?){
 
         super.onViewCreated(view, savedInstanceState)
@@ -49,6 +44,9 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         val city = secondFragmentArgs.city
         val minRent = secondFragmentArgs.minRent
         val maxRent = secondFragmentArgs.maxRent
+        //val roof = secondFragmentArgs.roof
+        val minArea = secondFragmentArgs.minArea
+        val maxArea = secondFragmentArgs.maxArea
 
         Log.d("data", "test params: $buyOrRent - $city - $minRent - $maxRent")
 
@@ -57,10 +55,12 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         val minRent2 = secondFragmentArgs.minRent2
         val maxRent2 = secondFragmentArgs.maxRent2
         if (buyOrRent2 != ""){
-            getMyData(buyOrRent2, city2, minRent2, maxRent2)
+           // Log.e("this is a chat demo", city2 + " " + minRent2 + " " + maxRent2 + " " + buyOrRent2)
+            getMyData(buyOrRent2, city2, minRent2.toInt(), maxRent2.toInt(), "1".toInt(), "5000".toInt())
         }else {
 
-            getMyData(buyOrRent, city, minRent, maxRent)
+            getMyData(buyOrRent, city, minRent.toInt(), maxRent.toInt(),minArea.toInt(),maxArea.toInt())
+            //Log.e("this is a chat demo", city + " " + minRent + " " + maxRent + " " + buyOrRent)
 
         }
 
@@ -97,7 +97,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
 
 
-    private fun getMyData(buyOrRent: String, city: String, minRent: String, maxRent: String) {
+    private fun getMyData(buyOrRent: String, city: String, minRent: Int, maxRent: Int, minArea: Int, maxArea: Int) {
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
@@ -105,13 +105,13 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             .create(ApiInterface::class.java)
 
 //        val retrofitData = retrofitBuilder.getData(buyOrRent, city, minRent, maxRent)
-        val retrofitData = retrofitBuilder.getData()
+        val retrofitData = retrofitBuilder.getData(city,buyOrRent,minRent,maxRent,minArea,maxArea)
 
         retrofitData.enqueue(object : Callback<Test> {
 
             override fun onResponse(call: Call<Test>, response: Response<Test>) {
                 response.body()!!.products?.forEach {
-                    Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price}")
+                    Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price}- ${it.roof}")
                     val responseBody = response.body()!!.products
                     recyclerAdapter = RecyclerAdapter(responseBody!!)
                     recyclerAdapter.notifyDataSetChanged()

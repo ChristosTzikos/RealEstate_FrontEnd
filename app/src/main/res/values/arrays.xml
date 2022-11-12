@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cities_array">
+        <item></item>
         <item>Θεσσαλονίκη</item>
         <item>Αθήνα</item>
         <item>Λάρισα</item>
         <item>Ηράκλειο</item>
-        <item></item>
+
 
     </string-array>
 </resources>

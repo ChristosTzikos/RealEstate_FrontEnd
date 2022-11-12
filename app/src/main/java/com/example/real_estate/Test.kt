@@ -40,17 +40,19 @@ data class Product2(
     val id: String,
     @SerializedName("Name")
     val name: String?,
+    @SerializedName("Sale")
+    val sale: String?,
     @SerializedName("Photo")
     val photo: String?,
     @SerializedName("Price")
     val price: Int?,
     @SerializedName("Region")
     val region: String?,
+    @SerializedName("Roof")
+    val roof: Int?,
     @SerializedName("request")
     val request: Request2
 )
-
-
 
 
 data class Request2(

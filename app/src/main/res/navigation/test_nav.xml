@@ -47,6 +47,14 @@
             app:argType="string" />
 
         <argument
+            android:name="maxArea"
+            app:argType="string" />
+
+        <argument
+            android:name="minArea"
+            app:argType="string" />
+
+        <argument
             android:name="buyOrrent2"
             app:argType="string" />
 
@@ -85,10 +93,8 @@
         android:label="filter"
         tools:layout="@layout/fragment_filter" >
         <action
-            android:id="@+id/action_filterFragment_to_secondFragment4"
-            app:destination="@id/secondFragment"
-            app:popUpTo="@id/secondFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_filterFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"

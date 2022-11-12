@@ -23,6 +23,9 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
 
     private var city = ""
 
+    private var maxArea: String = "500"
+    private var minArea: String = "1"
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,7 +49,7 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             Log.d("this is a test", strarray.toString())
             val thodoris = strarray[2]
             Log.d("this is an array test", thodoris)
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", strarray[0], strarray[1], strarray[2], strarray[3]))
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", "", "", strarray[0], strarray[1], strarray[2], strarray[3]))
         }
 
         //fragment to chatbot activity navigation
@@ -62,11 +65,24 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
 
             //before navigating we need to get the user's inputs
             val radioSelection = binding.radioGroup.checkedRadioButtonId
-            val buyOrRent = if(radioSelection == 0) "buy" else "rent"
-            val rentMin = binding.minRentEdittext.text.toString()
-            val rentMax = binding.maxRentEdittext.text.toString()
+            val buyOrRent = if(binding.radioGroup.getCheckedRadioButtonId() != -1 && binding.rentChip.isChecked ){
+                "rent"
+            } else{
+                "buy"
+            }
+            var minRent = binding.minRentEdittext.text.toString()
+            var maxRent = binding.maxRentEdittext.text.toString()
 
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, rentMin, rentMax, "", "", "", ""))
+            if (minRent == ""){
+                minRent = "0"
+            }
+            if (maxRent == ""){
+                maxRent = "100000000"
+            }
+
+
+
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, minRent, maxRent, maxArea,minArea, "","","",""))
         }
 
         binding.btnLoginFragment.setOnClickListener {

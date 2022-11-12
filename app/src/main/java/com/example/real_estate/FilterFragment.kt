@@ -1,6 +1,7 @@
 package com.example.real_estate
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,12 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
     private var _binding: FragmentFilterBinding? = null
     private val binding get() = _binding!!
 
+    private var maxArea: String = "1000000000000"
+    private var minArea: String = "1"
+    private var minRent: String = "0"
+    private var maxRent: String = "999999999"
+    private var buyOrRent: String = ""
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,13 +38,38 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
         }
 
         binding.btnFindLast.setOnClickListener{
-            /* val filter etc
-            ..
-            ..
-            ..
+
+            val radioSelection = binding.radioGroup.checkedRadioButtonId
+            val buyOrRent = if(binding.radioGroup.getCheckedRadioButtonId() != -1 && binding.rentChip.isChecked ){
+                "rent"
+            } else{
+                "buy"
+            }
+
+            var minArea  = binding.minArea.text.toString()
+            var maxArea = binding.maxArea.text.toString()
+
+            var minRent = binding.minRentEditext.text.toString()
+            var maxRent = binding.maxPriceLayout.text.toString()
+
+            Log.e("kostas",buyOrRent+minArea+maxArea+minRent+maxRent)
+
+            if (minRent == ""){
+                minRent = "0"
+            }
+            if (maxRent == ""){
+                maxRent = "100000000"
+            }
+
+            if (minArea == ""){
+                minArea = "0"
+            }
+            if (maxArea == ""){
+                maxArea = "100000000"
+            }
 
 
-            findNavController().navigate(FilterFragmentDirections.actionFilterFragmentToSecondFragment())*/
+            findNavController().navigate(FilterFragmentDirections.actionFilterFragmentToSecondFragment(buyOrRent,"",minRent,maxRent,minArea,maxArea, "", "", "", ""))
         }
 
 
