@@ -42,8 +42,25 @@
             app:argType="string" />
 
         <argument
-            android:name="url"
+            android:name="buyOrrent2"
             app:argType="string" />
+
+        <argument
+            android:name="city2"
+            app:argType="string" />
+
+        <argument
+            android:name="minRent2"
+            app:argType="string" />
+
+        <argument
+            android:name="maxRent2"
+            app:argType="string" />
+
+
+<!--        <argument-->
+<!--            android:name="url"-->
+<!--            app:argType="string" />-->
 
         <action
             android:id="@+id/action_secondFragment_to_detailFragment"

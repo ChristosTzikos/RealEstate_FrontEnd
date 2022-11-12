@@ -49,19 +49,14 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         val city = secondFragmentArgs.city
         val minRent = secondFragmentArgs.minRent
         val maxRent = secondFragmentArgs.maxRent
-        val url = secondFragmentArgs.url
+
         Log.d("data", "test params: $buyOrRent - $city - $minRent - $maxRent")
 
-        if (url != ""){
-
-        }
+//        if (url != ""){
+//
+//        }
 
         getMyData(buyOrRent, city, minRent, maxRent)
-
-
-
-
-
 
 
         recyclerView = binding.recyclerView

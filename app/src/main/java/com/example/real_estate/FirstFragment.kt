@@ -13,7 +13,7 @@ import com.google.cloud.dialogflow.v2.Intent
 import timber.log.Timber
 
 //import com.example.viewbinding.datababinding.FirstFragment
-const val BASE_URL = "https://homeazy.herokuapp.com/"
+const val BASE_URL = "https://homezy1.herokuapp.com/"
 
 
 class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelectedListener {
@@ -40,9 +40,11 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
 
         //navigate from chatbot_activity to second fragment with extras URL
         var extrasurl = (requireActivity() as MainActivity).intent.extras?.getString("url")
-        Toast.makeText(requireContext(), "asdasdads: $extrasurl", Toast.LENGTH_LONG).show()
         if (extrasurl != null){
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", extrasurl))
+            val responceSTR: String = extrasurl
+            val strarray: List<String> = responceSTR.split("&")
+            Log.d("this is a test", strarray.toString())
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", "", "", "", ""))
         }
 
         //fragment to chatbot activity navigation
@@ -62,7 +64,7 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             val rentMin = binding.minRentEdittext.text.toString()
             val rentMax = binding.maxRentEdittext.text.toString()
 
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, rentMin, rentMax, ""))
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, rentMin, rentMax, "", "", "", ""))
         }
 
 

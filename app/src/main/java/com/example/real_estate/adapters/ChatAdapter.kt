@@ -34,7 +34,7 @@ class ChatAdapter(private var activity: Activity, private var messageList: List<
       binding.resbtn.setOnClickListener{
         itemClickChannel.trySend(item.message)
       }
-      if (item.isReceived && item.message.contains("https")) {
+      if (item.isReceived && item.message.contains("&")) {
 
         //val url = item.message
         binding.resbtn.visibility = View.VISIBLE
