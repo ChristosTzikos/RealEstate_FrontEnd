@@ -58,10 +58,11 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         val maxRent2 = secondFragmentArgs.maxRent2
         if (buyOrRent2 != ""){
             getMyData(buyOrRent2, city2, minRent2, maxRent2)
+        }else {
+
+            getMyData(buyOrRent, city, minRent, maxRent)
+
         }
-
-        getMyData(buyOrRent, city, minRent, maxRent)
-
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
