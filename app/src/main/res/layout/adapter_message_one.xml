@@ -35,11 +35,21 @@
   </TextView>
 
   <Button
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/urlbtn"
+      android:padding="5dp"
+      android:minHeight="50dp"
+      android:textColor="@android:color/black"
+      android:layout_marginBottom="5dp"
+      android:textSize="20sp"
+      android:id="@+id/resbtn"
+      android:background="@drawable/bg_chat_receive"
+      android:layout_marginEnd="30dp"
       android:visibility="gone"
-      android:text="press it"
-    ></Button>
+      >
+  </Button>
+
+
+
 
 </LinearLayout>

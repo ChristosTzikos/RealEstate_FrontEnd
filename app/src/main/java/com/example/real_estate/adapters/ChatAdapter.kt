@@ -9,50 +9,46 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.real_estate.Chatbot_activity
 import com.google.android.material.snackbar.Snackbar
 import com.example.real_estate.R
+import com.example.real_estate.SecondFragment
 import com.example.real_estate.adapters.ChatAdapter.ChatViewHolder
+import com.example.real_estate.databinding.ActivityChatbotBinding
+import com.example.real_estate.databinding.ActivityMainBinding
 import com.example.real_estate.databinding.AdapterMessageOneBinding
 import com.example.real_estate.models.Message
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.android.synthetic.main.adapter_message_one.*
+import kotlin.math.log
 
 class ChatAdapter(private var activity: Activity, private var messageList: List<Message>) : RecyclerView.Adapter<ChatViewHolder>() {
 
   class ChatViewHolder(private val itemClickChannel: Channel<String>, private val binding: AdapterMessageOneBinding) : RecyclerView.ViewHolder(binding.root) {
 
-//    fun urlempty(item: message): String {
-//      val urlasd = item.message
-//      if(urlasd.isEmpty()){
-//        return urlasd
-//      } else {
-//        urlasd.replace(item.message, "")
-//      }
-
-
-
     @SuppressLint("SuspiciousIndentation")
     fun bindItem(item: Message){
-      if (item.isReceived && item.message.contains("http:")) {
-        //if (item.message.contains("http:")) {
-          //binding.urlbtn.visibility = View.VISIBLE
-          //Log.d("thodoris", item.message)
-        val url = item.message
-          itemClickChannel.trySend(url)
-        //}
-          binding.urlbtn.visibility = View.VISIBLE
-          binding.messageReceive.visibility = View.GONE
-          binding.messageSend.visibility = View.GONE
+      Log.d("asd", item.message)
+      binding.resbtn.setOnClickListener{
+        itemClickChannel.trySend(item.message)
+      }
+      if (item.isReceived && item.message.contains("&")) {
 
-        //url.replace(item.message, "kostas")
-        //binding.messageReceive.text = item.message
+        //val url = item.message
+        binding.resbtn.visibility = View.VISIBLE
+        binding.messageReceive.visibility = View.GONE
+        binding.messageSend.visibility = View.VISIBLE
+
 
       } else if(item.isReceived){
+        binding.resbtn.visibility = View.GONE
         binding.messageReceive.visibility = View.VISIBLE
         binding.messageSend.visibility = View.GONE
         binding.messageReceive.text = item.message
       } else {
+        binding.resbtn.visibility = View.GONE
         binding.messageSend.visibility = View.VISIBLE
         binding.messageReceive.visibility = View.GONE
         binding.messageSend.text = item.message

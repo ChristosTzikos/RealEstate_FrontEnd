@@ -1,28 +1,32 @@
 package com.example.real_estate
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.api.gax.core.FixedCredentialsProvider
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.auth.oauth2.ServiceAccountCredentials
 import com.google.cloud.dialogflow.v2.DetectIntentRequest
 import com.google.cloud.dialogflow.v2.DetectIntentResponse
-import com.google.cloud.dialogflow.v2.Intent
 import com.google.cloud.dialogflow.v2.QueryInput
 import com.google.cloud.dialogflow.v2.SessionName
 import com.google.cloud.dialogflow.v2.SessionsClient
 import com.google.cloud.dialogflow.v2.SessionsSettings
 import com.google.cloud.dialogflow.v2.TextInput
 import com.example.real_estate.adapters.ChatAdapter
+import com.example.real_estate.adapters.ChatAdapter.*
 import com.example.real_estate.models.Message
-import kotlinx.android.synthetic.main.activity_chatbot.btnSend
-import kotlinx.android.synthetic.main.activity_chatbot.chatView
-import kotlinx.android.synthetic.main.activity_chatbot.editMessage
+import kotlinx.android.synthetic.main.activity_chatbot.*
 import kotlinx.android.synthetic.main.adapter_message_one.*
+import kotlinx.android.synthetic.main.adapter_message_one.view.*
 import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.GlobalScope
 //import kotlinx.coroutines.NonCancellable.message
@@ -37,6 +41,7 @@ import java.util.UUID
 class Chatbot_activity : AppCompatActivity() {
   private var messageList: ArrayList<Message> = ArrayList()
 
+
   //dialogFlow
   private var sessionsClient: SessionsClient? = null
   private var sessionName: SessionName? = null
@@ -44,27 +49,26 @@ class Chatbot_activity : AppCompatActivity() {
   private val TAG = "chatbotactivity"
   private lateinit var chatAdapter: ChatAdapter
 
+
   @SuppressLint("NotifyDataSetChanged")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_chatbot)
 
-    //setting adapter to recyclerview
+   // var asdbtn = findViewById<Button>(R.id.btnUrl)
 
+    //setting adapter to recyclerview
     chatAdapter = ChatAdapter(this, messageList)
     chatView.adapter = chatAdapter
 
-
     chatAdapter.itemClicks.onEach {
-      Toast.makeText(this, "asdasd",Toast.LENGTH_SHORT).show()
-      //Log.d(TAG, "doInBackground: " + it.message)
-//      urlbtn.setOnClickListener{
-//        Toast.makeText(this/@mainactivity, "", Toast.LENGTH_SHORT).show()
-//      }
-//      val intent = Intent(this, HouseActivity::class)
-//      intent.putExtra("url", it)
-//      startActivity(intent)
+
+       val intent = Intent(this@Chatbot_activity, MainActivity::class.java)
+       intent.putExtra("url", it)
+       startActivity(intent)
+
     }.launchIn(lifecycleScope)
+
 
     //onclick listener to update the list and call dialogflow
     btnSend.setOnClickListener {
@@ -80,6 +84,7 @@ class Chatbot_activity : AppCompatActivity() {
     //initialize bot config
     setUpBot()
   }
+
 
   @SuppressLint("NotifyDataSetChanged")
   private fun addMessageToList(message: String, isReceived: Boolean) {

@@ -2,11 +2,10 @@
 <resources>
     <string-array name="cities_array">
         <item>Θεσσαλονίκη</item>
-        <item>Athens</item>
+        <item>Αθήνα</item>
         <item>Λάρισα</item>
-        <item>Volos</item>
-        <item>Karditsa</item>
-        <item>Tripoli</item>
+        <item>Ηράκλειο</item>
+        <item></item>
 
     </string-array>
 </resources>

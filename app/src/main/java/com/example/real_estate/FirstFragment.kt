@@ -1,16 +1,19 @@
 package com.example.real_estate
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.real_estate.databinding.FragmentFirstBinding
 import com.google.cloud.dialogflow.v2.Intent
+import timber.log.Timber
 
 //import com.example.viewbinding.datababinding.FirstFragment
-const val BASE_URL = "https://homeazy.herokuapp.com/"
+const val BASE_URL = "https://homezy1.herokuapp.com/"
 
 
 class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelectedListener {
@@ -35,6 +38,18 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
         //set a default option checked, e.g. the buy option
         binding.buyChip.isChecked = true
 
+        //navigate from chatbot_activity to second fragment with extras URL
+        var extrasurl = (requireActivity() as MainActivity).intent.extras?.getString("url")
+        if (extrasurl != null){
+            val responceSTR: String = extrasurl
+            val strarray: List<String> = responceSTR.split("&")
+            Log.d("this is a test", strarray.toString())
+            val thodoris = strarray[2]
+            Log.d("this is an array test", thodoris)
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", strarray[0], strarray[1], strarray[2], strarray[3]))
+        }
+
+        //fragment to chatbot activity navigation
         binding.btnChat.setOnClickListener {
             val intent = android.content.Intent(
                 this@FirstFragment.requireContext(),
@@ -51,7 +66,7 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             val rentMin = binding.minRentEdittext.text.toString()
             val rentMax = binding.maxRentEdittext.text.toString()
 
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, rentMin, rentMax))
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, rentMin, rentMax, "", "", "", ""))
         }
 
         binding.btnLoginFragment.setOnClickListener {
