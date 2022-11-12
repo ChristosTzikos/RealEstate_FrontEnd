@@ -1,6 +1,7 @@
 package com.example.real_estate
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -15,7 +16,6 @@ import com.google.auth.oauth2.GoogleCredentials
 import com.google.auth.oauth2.ServiceAccountCredentials
 import com.google.cloud.dialogflow.v2.DetectIntentRequest
 import com.google.cloud.dialogflow.v2.DetectIntentResponse
-import com.google.cloud.dialogflow.v2.Intent
 import com.google.cloud.dialogflow.v2.QueryInput
 import com.google.cloud.dialogflow.v2.SessionName
 import com.google.cloud.dialogflow.v2.SessionsClient
@@ -58,33 +58,16 @@ class Chatbot_activity : AppCompatActivity() {
    // var asdbtn = findViewById<Button>(R.id.btnUrl)
 
     //setting adapter to recyclerview
-
     chatAdapter = ChatAdapter(this, messageList)
     chatView.adapter = chatAdapter
 
-
     chatAdapter.itemClicks.onEach {
 
-      btnSend.visibility = View.GONE
-      editMessage.visibility= View.GONE
-      btnUrl.visibility = View.VISIBLE
+       val intent = Intent(this@Chatbot_activity, MainActivity::class.java)
+       intent.putExtra("url", it)
+       startActivity(intent)
 
-      btnUrl.setOnClickListener{
-        val secondFragment = SecondFragment()
-        val fragment : Fragment? =
-            supportFragmentManager.findFragmentByTag(SecondFragment::class.java.simpleName)
-
-      }
-      //Log.d(TAG, "doInBackground: " + it.message)
-//      urlbtn.setOnClickListener{
-//        Toast.makeText(this/@mainactivity, "", Toast.LENGTH_SHORT).show()
-//      }
-//      val intent = Intent(this, HouseActivity::class)
-//      intent.putExtra("url", it)
-//      startActivity(intent)
     }.launchIn(lifecycleScope)
-
-
 
 
     //onclick listener to update the list and call dialogflow

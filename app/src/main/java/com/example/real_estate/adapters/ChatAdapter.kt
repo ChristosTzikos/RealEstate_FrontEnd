@@ -30,20 +30,25 @@ class ChatAdapter(private var activity: Activity, private var messageList: List<
 
     @SuppressLint("SuspiciousIndentation")
     fun bindItem(item: Message){
+      Log.d("asd", item.message)
+      binding.resbtn.setOnClickListener{
+        itemClickChannel.trySend(item.message)
+      }
       if (item.isReceived && item.message.contains("https")) {
 
-        val url = item.message
-        itemClickChannel.trySend(url)
+        //val url = item.message
+        binding.resbtn.visibility = View.VISIBLE
         binding.messageReceive.visibility = View.GONE
-        binding.messageSend.visibility = View.GONE
-
+        binding.messageSend.visibility = View.VISIBLE
 
 
       } else if(item.isReceived){
+        binding.resbtn.visibility = View.GONE
         binding.messageReceive.visibility = View.VISIBLE
         binding.messageSend.visibility = View.GONE
         binding.messageReceive.text = item.message
       } else {
+        binding.resbtn.visibility = View.GONE
         binding.messageSend.visibility = View.VISIBLE
         binding.messageReceive.visibility = View.GONE
         binding.messageSend.text = item.message
