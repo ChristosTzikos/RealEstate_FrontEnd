@@ -52,9 +52,13 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
         Log.d("data", "test params: $buyOrRent - $city - $minRent - $maxRent")
 
-//        if (url != ""){
-//
-//        }
+        val buyOrRent2 = secondFragmentArgs.buyOrrent2
+        val city2 = secondFragmentArgs.city2
+        val minRent2 = secondFragmentArgs.minRent2
+        val maxRent2 = secondFragmentArgs.maxRent2
+        if (buyOrRent2 != ""){
+            getMyData(buyOrRent2, city2, minRent2, maxRent2)
+        }
 
         getMyData(buyOrRent, city, minRent, maxRent)
 

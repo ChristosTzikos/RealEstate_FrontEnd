@@ -58,10 +58,6 @@
             app:argType="string" />
 
 
-<!--        <argument-->
-<!--            android:name="url"-->
-<!--            app:argType="string" />-->
-
         <action
             android:id="@+id/action_secondFragment_to_detailFragment"
             app:destination="@id/detailFragment" />

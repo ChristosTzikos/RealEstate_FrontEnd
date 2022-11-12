@@ -44,7 +44,9 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             val responceSTR: String = extrasurl
             val strarray: List<String> = responceSTR.split("&")
             Log.d("this is a test", strarray.toString())
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", "", "", "", ""))
+            val thodoris = strarray[2]
+            Log.d("this is an array test", thodoris)
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("", "", "", "", strarray[0], strarray[1], strarray[2], strarray[3]))
         }
 
         //fragment to chatbot activity navigation
