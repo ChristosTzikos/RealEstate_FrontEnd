@@ -114,7 +114,7 @@ class Chatbot_activity : AppCompatActivity() {
 
   private fun sendMessageToBot(message: String) {
     val input = QueryInput.newBuilder()
-      .setText(TextInput.newBuilder().setText(message).setLanguageCode("en-US")).build()
+      .setText(TextInput.newBuilder().setText(message).setLanguageCode("el")).build()
     GlobalScope.launch {
       sendMessageInBg(input)
     }
