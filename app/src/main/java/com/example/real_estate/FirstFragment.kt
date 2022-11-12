@@ -69,6 +69,10 @@ class FirstFragment : Fragment(R.layout.fragment_first), AdapterView.OnItemSelec
             findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(buyOrRent, city, rentMin, rentMax, "", "", "", ""))
         }
 
+        binding.btnLoginFragment.setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_loginFragment)
+        }
+
 
     }
 
