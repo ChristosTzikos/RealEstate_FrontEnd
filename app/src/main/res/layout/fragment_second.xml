@@ -41,6 +41,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:background="@drawable/custombuttons"
+        android:layout_marginTop="2dp"
+
 
         />
 
@@ -50,6 +52,7 @@
            android:layout_width="match_parent"
            android:layout_height="1dp"
            android:background="@color/white"
+           android:layout_marginTop="2dp"
            />
 
 

@@ -30,10 +30,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         _binding = FragmentDetailBinding.bind(view)
 
-        val btnBack = binding.btnBack
-        btnBack.setOnClickListener(){
-            findNavController().popBackStack()
-        }
+
 
 
         //Get Data From Second Fragment
