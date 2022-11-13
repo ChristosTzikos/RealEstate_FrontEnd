@@ -117,6 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:background="@drawable/custombuttons"
             android:text="Contact"/>
         <Button
             android:id="@+id/btn_back"
@@ -124,6 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:background="@drawable/custombuttons"
             android:text="Back"/>
 
     </LinearLayout>

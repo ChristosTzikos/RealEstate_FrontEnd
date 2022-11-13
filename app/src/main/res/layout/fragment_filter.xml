@@ -59,57 +59,7 @@
         </RadioGroup>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Select floor:"
-            android:textColor="#FF5722"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            />
 
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            >
-
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="1st floor"
-                android:textSize="15sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2nd floor"
-                android:textSize="15sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="3rd floor"
-                android:textSize="15sp"/>
-
-            <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4th floor"
-                android:textSize="15sp"/>
-        </LinearLayout>
 
 
         <TextView
@@ -251,18 +201,13 @@
             >
 
 
-            <Button
-                android:id="@+id/btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Back"
-                android:textSize="15sp"
-                />
+
 
             <Button
                 android:id="@+id/btn_find_last"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custombuttons"
                 android:text="Find" />
 
 

@@ -107,6 +107,7 @@
                 android:text="Register"
                 android:layout_toStartOf="@id/btn_login_reg"
                 android:backgroundTint="@color/purple_200"
+                android:background="@drawable/custombuttons"
 
                 android:layout_marginEnd="40dp"/>
 

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.example.real_estate.FirstFragment"
-        android:label="first"
+        android:label="Homezy"
         tools:layout="@layout/fragment_first" >
         <action
 
@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.real_estate.SecondFragment"
-        android:label="second"
+        android:label="Products"
         tools:layout="@layout/fragment_second" >
 
 
@@ -71,6 +71,8 @@
             app:argType="string" />
 
 
+
+
         <action
             android:id="@+id/action_secondFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -90,8 +92,12 @@
     <fragment
         android:id="@+id/filterFragment"
         android:name="com.example.real_estate.FilterFragment"
-        android:label="filter"
+        android:label="Filter"
         tools:layout="@layout/fragment_filter" >
+        <argument
+            android:name="city"
+            app:argType="string" />
+
         <action
             android:id="@+id/action_filterFragment_to_secondFragment"
             app:destination="@id/secondFragment" />

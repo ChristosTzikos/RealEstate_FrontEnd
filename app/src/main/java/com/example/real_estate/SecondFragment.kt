@@ -48,6 +48,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         val minArea = secondFragmentArgs.minArea
         val maxArea = secondFragmentArgs.maxArea
 
+
         Log.d("data", "test params: $buyOrRent - $city - $minRent - $maxRent")
 
         val buyOrRent2 = secondFragmentArgs.buyOrrent2
@@ -55,12 +56,12 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         val minRent2 = secondFragmentArgs.minRent2
         val maxRent2 = secondFragmentArgs.maxRent2
         if (buyOrRent2 != ""){
-           // Log.e("this is a chat demo", city2 + " " + minRent2 + " " + maxRent2 + " " + buyOrRent2)
+            Log.e("this is a chat demo 2", city2 + " " + minRent2 + " " + maxRent2 + " " + buyOrRent2)
             getMyData(buyOrRent2, city2, minRent2.toInt(), maxRent2.toInt(), "1".toInt(), "5000".toInt())
         }else {
-
+            Log.e("this is a chat demo", city + " " + minRent + " " + maxRent + " " + buyOrRent + " " + minArea + "" + maxArea)
             getMyData(buyOrRent, city, minRent.toInt(), maxRent.toInt(),minArea.toInt(),maxArea.toInt())
-            //Log.e("this is a chat demo", city + " " + minRent + " " + maxRent + " " + buyOrRent)
+
 
         }
 
@@ -85,7 +86,8 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
 
         binding.filters.setOnClickListener{
-            findNavController().navigate(R.id.filterFragment)
+           findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToFilterFragment(city))
+            //findNavController().navigate(R.id.filterFragment)
         }
 
 
@@ -105,13 +107,14 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             .create(ApiInterface::class.java)
 
 //        val retrofitData = retrofitBuilder.getData(buyOrRent, city, minRent, maxRent)
+        Log.e("dimitris", city + " " + minRent + " " + maxRent + " " + buyOrRent + " " + minArea + " " + maxArea)
         val retrofitData = retrofitBuilder.getData(city,buyOrRent,minRent,maxRent,minArea,maxArea)
 
         retrofitData.enqueue(object : Callback<Test> {
 
             override fun onResponse(call: Call<Test>, response: Response<Test>) {
                 response.body()!!.products?.forEach {
-                    Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price}- ${it.roof}")
+                    Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price}")
                     val responseBody = response.body()!!.products
                     recyclerAdapter = RecyclerAdapter(responseBody!!)
                     recyclerAdapter.notifyDataSetChanged()

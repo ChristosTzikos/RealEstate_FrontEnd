@@ -39,7 +39,7 @@ class ChatAdapter(private var activity: Activity, private var messageList: List<
         //val url = item.message
         binding.resbtn.visibility = View.VISIBLE
         binding.messageReceive.visibility = View.GONE
-        binding.messageSend.visibility = View.VISIBLE
+        binding.messageSend.visibility = View.GONE
 
 
       } else if(item.isReceived){

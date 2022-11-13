@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_200"
             android:text="@string/login"
+            android:background="@drawable/custombuttons"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -106,28 +107,27 @@
             android:id="@+id/btn_find"
             android:layout_width="133dp"
             android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/custombuttons"
             android:outlineSpotShadowColor="@color/white"
             android:text="ΒΡΕΣ ΤΟ!"
+
+
             app:layout_constraintEnd_toEndOf="parent"
-
-
-            app:layout_constraintHorizontal_bias="0.244"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/price_layout" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_chat"
-            android:layout_width="133dp"
-            android:layout_height="45dp"
-
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:background="@drawable/button_chat"
             android:outlineSpotShadowColor="@color/white"
-            android:text="Chatbot"
+            android:src="@drawable/ic_baseline_textsms_24"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-
-
-            app:layout_constraintHorizontal_bias="0.129"
-            app:layout_constraintStart_toEndOf="@+id/btn_find"
-            app:layout_constraintTop_toBottomOf="@+id/price_layout" />
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintVertical_bias="0.872" />
 
         <LinearLayout
             android:id="@+id/price_layout"

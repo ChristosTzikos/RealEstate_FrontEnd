@@ -15,7 +15,7 @@ interface ApiInterface {
         @Query("minPrice") minPrice: Int,
         @Query("maxPrice") maxPrice: Int,
         @Query("sqMin") minArea: Int,
-        @Query("sqMax") maxArea: Int
+        @Query("sqMax") maxArea: Int,
 
     )
             : Call<Test>

@@ -6,18 +6,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.real_estate.databinding.FragmentFilterBinding
-
+import kotlin.math.floor
 
 
 class FilterFragment : Fragment(R.layout.fragment_filter) {
 
+
     private var _binding: FragmentFilterBinding? = null
     private val binding get() = _binding!!
+    private val filtersFragmentArgs: FilterFragmentArgs by navArgs()
 
+
+    //private val city = filtersFragmentArgs.cityfilter
     private var maxArea: String = "1000000000000"
     private var minArea: String = "1"
     private var minRent: String = "0"
@@ -25,17 +32,18 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
     private var buyOrRent: String = ""
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentFilterBinding.bind(view)
 
 
-        binding.btnBack.setOnClickListener{
-
-
-            findNavController().popBackStack()
-
-        }
+//        binding.btnBack.setOnClickListener{
+//
+//
+//            findNavController().popBackStack()
+//
+//        }
 
         binding.btnFindLast.setOnClickListener{
 
@@ -45,6 +53,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
             } else{
                 "buy"
             }
+            val city = filtersFragmentArgs.city
 
             var minArea  = binding.minArea.text.toString()
             var maxArea = binding.maxArea.text.toString()
@@ -69,7 +78,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
             }
 
 
-            findNavController().navigate(FilterFragmentDirections.actionFilterFragmentToSecondFragment(buyOrRent,"",minRent,maxRent,minArea,maxArea, "", "", "", ""))
+            findNavController().navigate(FilterFragmentDirections.actionFilterFragmentToSecondFragment(buyOrRent,city,minRent,maxRent,maxArea,minArea, "", "", "", ""))
         }
 
 
@@ -77,5 +86,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
 
 
     }
+
+
 }
 

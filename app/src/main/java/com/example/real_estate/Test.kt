@@ -48,8 +48,6 @@ data class Product2(
     val price: Int?,
     @SerializedName("Region")
     val region: String?,
-    @SerializedName("Roof")
-    val roof: Int?,
     @SerializedName("request")
     val request: Request2
 )
