@@ -48,10 +48,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="right"
+        android:gravity="right">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailDesc"/>
 
-        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

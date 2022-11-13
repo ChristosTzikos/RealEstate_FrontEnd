@@ -132,6 +132,10 @@
             android:name="photo"
             app:argType="string"/>
 
+        <argument
+            android:name="Description"
+            app:argType="string"/>
+
 
 
     </fragment>

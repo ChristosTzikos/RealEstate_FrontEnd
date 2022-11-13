@@ -114,7 +114,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
             override fun onResponse(call: Call<Test>, response: Response<Test>) {
                 response.body()!!.products?.forEach {
-                    Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price}")
+                    Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price} - ${it.description} ")
                     val responseBody = response.body()!!.products
                     recyclerAdapter = RecyclerAdapter(responseBody!!)
                     recyclerAdapter.notifyDataSetChanged()
@@ -136,7 +136,8 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
                                 that.region.toString(),
                                 that.area.toString() ,
                                 that.price.toString() ,
-                                that.photo.toString()
+                                that.photo.toString(),
+                                that.description.toString()
                             ))
                         }
 

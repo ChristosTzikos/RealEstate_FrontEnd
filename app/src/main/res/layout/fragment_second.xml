@@ -37,21 +37,13 @@
         android:id="@+id/filters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Filters"
+        android:text="ΦΙΛΤΡΑ"
         android:textSize="16sp"
         android:textStyle="bold"
         android:background="@drawable/custombuttons"
 
         />
-       <Button
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:id="@+id/btn_find"
-           android:text="Find"
-           android:textStyle="bold"
-           android:textSize="16sp"
-           android:background="@drawable/custombuttons"
-           />
+
 
     </LinearLayout>
        <LinearLayout

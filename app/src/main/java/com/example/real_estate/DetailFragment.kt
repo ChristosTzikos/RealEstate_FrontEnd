@@ -43,6 +43,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         val price = detailFragmentArgs.price
         val region = detailFragmentArgs.region
         val photo = detailFragmentArgs.photo
+        val description = detailFragmentArgs.description
 
 
 
@@ -57,6 +58,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         val detailPrice : TextView = binding.detailPrice
         val detailRegion : TextView = binding.detailRegion
         val detailPhoto : ImageView = binding.detailPhoto
+        val detailDesc : TextView = binding.detailDesc
 
 
 
@@ -67,6 +69,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         detailArea.text = area.toString()
         detailPrice.text = price.toString()
         detailPhoto.load(photo)
+        detailDesc.text = description.toString()
 
 
     }

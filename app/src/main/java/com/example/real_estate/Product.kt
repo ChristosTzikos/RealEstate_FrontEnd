@@ -6,6 +6,7 @@ data class Product(
     val Photo: String,
     val Price: Int,
     val Region: String,
+    val Description: String,
     val _id: String,
     val request: Request
 )
