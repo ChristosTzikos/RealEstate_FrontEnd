@@ -207,11 +207,12 @@
 
 
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_find_last"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custombuttons"
+                android:textColor="@color/white"
                 android:text="ΒΡΕΣ ΤΟ!" />
 
 

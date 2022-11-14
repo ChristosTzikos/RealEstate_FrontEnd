@@ -44,6 +44,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/reg_username"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -61,6 +62,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/reg_password"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
@@ -78,6 +80,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/reg_cnf_password"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
@@ -100,13 +103,13 @@
                 android:textColor="@color/black"
                 android:layout_marginEnd="40dp"/>
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_register_reg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:layout_toStartOf="@id/btn_login_reg"
-                android:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
                 android:background="@drawable/custombuttons"
 
                 android:layout_marginEnd="40dp"/>

@@ -44,6 +44,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/log_username"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -61,6 +62,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/log_password"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
@@ -72,13 +74,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp">
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
                 android:layout_alignParentEnd="true"
-                android:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
                 android:background="@drawable/custombuttons"
                 android:layout_marginEnd="40dp"/>
 

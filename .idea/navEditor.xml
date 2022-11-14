@@ -13,9 +13,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="360" />
-                            <option name="y" value="8" />
+                            <option name="x" value="613" />
+                            <option name="y" value="-7" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_detailFragment_to_secondFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -25,8 +34,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-14" />
-                            <option name="y" value="393" />
+                            <option name="x" value="-32" />
+                            <option name="y" value="485" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -119,8 +128,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="412" />
-                            <option name="y" value="428" />
+                            <option name="x" value="392" />
+                            <option name="y" value="508" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -131,6 +140,11 @@
                               </value>
                             </entry>
                             <entry key="action_secondFragment_to_filterFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_secondFragment_to_firstFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

@@ -18,6 +18,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import com.example.real_estate.databinding.FragmentSecondBinding
+import kotlinx.android.synthetic.main.fragment_second.view.*
 import java.text.ParsePosition
 
 
@@ -38,7 +39,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         _binding = FragmentSecondBinding.bind(view)
 
 
-        Toast.makeText(requireContext(), "navigated to second fragment", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "Loading..", Toast.LENGTH_SHORT).show()
 
         val buyOrRent = secondFragmentArgs.buyOrRent
         val city = secondFragmentArgs.city
@@ -47,6 +48,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         //val roof = secondFragmentArgs.roof
         val minArea = secondFragmentArgs.minArea
         val maxArea = secondFragmentArgs.maxArea
+
 
 
         Log.d("data", "test params: $buyOrRent - $city - $minRent - $maxRent")
@@ -100,6 +102,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
 
     private fun getMyData(buyOrRent: String, city: String, minRent: Int, maxRent: Int, minArea: Int, maxArea: Int) {
+
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
@@ -113,6 +116,8 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         retrofitData.enqueue(object : Callback<Test> {
 
             override fun onResponse(call: Call<Test>, response: Response<Test>) {
+                binding.progressbar.visibility = View.GONE
+
                 response.body()!!.products?.forEach {
                     Log.d("data", "test data: ${it.area} - ${it.region} - ${it.name}- ${it.price} - ${it.description} ")
                     val responseBody = response.body()!!.products
